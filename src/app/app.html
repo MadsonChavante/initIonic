@@ -1,0 +1,37 @@
+<ion-split-pane>
+    <!-- logged in menu -->
+    <ion-menu id="loggedInMenu" [content]="content">
+  
+  
+      <ion-content class="outer-content">
+        
+        <div class="img" horizontal layout center center-justified>
+            <div class="logo-login">
+                <img src="assets/imgs/logo.png" alt="" class="img-responsive"/>
+            </div>
+        </div>
+        
+
+        <button ion-item menuClose>
+          <ion-icon name="contact" color = 'perfil'></ion-icon>
+            Madson Chavante
+        </button>
+  
+        <ion-list>
+          <ion-list-header>
+            Navegação
+          </ion-list-header>
+          <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)">
+            <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+            {{p.title}}
+          </button>
+        </ion-list>
+          
+      </ion-content>
+  
+    </ion-menu>
+  
+    <!-- main navigation -->
+    <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>
+  
+  </ion-split-pane>
