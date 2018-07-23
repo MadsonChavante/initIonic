@@ -1,3 +1,9 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="container">
+    <div class="loader"></div>
+  </div>
+</div>
+
 <ion-header no-border>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -8,55 +14,51 @@
 </ion-header>
 
 <ion-content >
-  <div class="painel" color ="perfil">
+  <div class="painel">
     <h2>Olá,</h2>
     <h1>Bem vindo!</h1>
   </div>
   <h4>O que vamos fazer ?</h4>
-  <ion-card>
-    <button ion-item no-padding>
+  <ion-card (click)="goSolicitacao()">
       <ion-card-header>
         Solicitar crédito
       </ion-card-header>
       <ion-card-content text-wrap>
           A cartos renovou seu app para facilitar mais ainda sua solicitação.
       </ion-card-content>
-    </button>
   </ion-card>
 
-  <ion-card>
-      <button ion-item no-padding click="">
+  <ion-card (click)="goExtrato()">
         <ion-card-header>
           Visualizar meu extrato
         </ion-card-header>
         <ion-card-content text-wrap>
             Efetuar consulta por período de todas as suas transações financeiras.
         </ion-card-content>
-      </button>
     </ion-card>
 
     <h4>Saiba mais.</h4>
 
-    <ion-card>
+    <ion-card (click)="openWithInAppBrowser('http://www.cartos.com.br/capital-giro/2')">
       <img src="assets/imgs/banner.jpg"/>
       <ion-card-content>
         <ion-card-title>
             Crédito para Micro e Pequenas Empresas
           </ion-card-title>
         <p>
-          Nós atendemos as necessidades das micro e Pequenas Empresas, com uma gama de produtos sob medida.	
+          Nós atendemos as necessidades das micro e Pequenas Empresas, com uma gama de produtos sob medida.
         </p>
       </ion-card-content>
     </ion-card>
 
-    <ion-card>
+    <ion-card (click)="openWithInAppBrowser('http://www.cartos.com.br/linhas-credito-plr-ppr/3')">
         <img src="assets/imgs/banner_01.jpg"/>
         <ion-card-content>
           <ion-card-title>
               Linhas de Crédito vinculadas ao PLR/PPR
             </ion-card-title>
           <p>
-            Colaboradores que queiram antecipar os recebíveis oriundos dos resultados performados dos Programas de Participação nos Lucros e/ou Resultados (PLR/PPR). Necessário convênio Junto à Empresa Empregadora.		
+            Colaboradores que queiram antecipar os recebíveis oriundos dos resultados performados dos Programas de Participação nos Lucros e/ou Resultados (PLR/PPR). Necessário convênio Junto à Empresa Empregadora.
           </p>
         </ion-card-content>
       </ion-card>

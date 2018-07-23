@@ -34,7 +34,7 @@ $headings-font-weight: 300;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #245b94,
+  primary:    #244463,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
@@ -43,6 +43,9 @@ $colors: (
   icon:       #747474
 );
 
+@mixin background-color-primary {
+  background-color: color($colors, primary);
+}
 
 // App iOS Variables
 // --------------------------------------------------

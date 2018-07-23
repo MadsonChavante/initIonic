@@ -1,12 +1,12 @@
 page-home {
-   
+
 }
 
 .painel{
     width: 100%;
     margin-top: -30px;
     padding: 20px;
-    background-color: #245b94;
+    @include background-color-primary;
     color: #fff;
 }
 .painel>h1{
@@ -14,5 +14,50 @@ page-home {
     font-weight: bold;
 }
 h4{
-   margin: 20px; 
+   margin: 20px;
+}
+
+
+
+
+
+
+
+
+#custom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width:100%;
+  @include background-color-primary;
+  opacity: 0.9;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  height: 50px;
+  width: 50px;
+  border: 5px solid #d5d5d5;
+  border-top-color: #e18d1b;
+  border-radius: 50%;
+  animation: spin .9s linear infinite;
+  margin: 50px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
