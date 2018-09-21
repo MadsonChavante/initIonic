@@ -25,21 +25,9 @@ export class HomePage {
     fullscreen: 'yes',//Windows only
   };
 
-  painelColor = 'primary';
-  tabBarElement: any;
-  splash = true;
-
   constructor(public navCtrl: NavController, private theInAppBrowser: InAppBrowser) {
-    this.tabBarElement = document.querySelector('.tabbar');
   }
 
-  ionViewDidLoad() {
-    this.tabBarElement.style.display = 'none';
-    setTimeout(() => {
-      this.splash = false;
-      this.tabBarElement.style.display = 'flex';
-    }, 4000);
-  }
   openWithInAppBrowser(url: string) {
     let target = "_blank";
     this.theInAppBrowser.create(url, target, this.options);

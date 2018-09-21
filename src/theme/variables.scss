@@ -11,6 +11,13 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
 
+.toast{
+  >div{
+    background-color:#32db64!important;
+  }
+}
+
+
 
 @import "ionic.globals";
 
@@ -40,11 +47,16 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222,
   perfil:     #1b72ac,
-  icon:       #747474
+  icon:       #747474,
+  limite:     #27bb90,
+  branco:     #fff
 );
 
 @mixin background-color-primary {
   background-color: color($colors, primary);
+}
+@mixin color-primary {
+  color: color($colors, primary);
 }
 
 // App iOS Variables

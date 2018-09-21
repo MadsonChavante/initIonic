@@ -1,0 +1,26 @@
+
+body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.b-c{
+  background-color: goldenrod;
+  color: #fff;
+  margin-top: 80px;
+}
+.t{
+  color: rgb(165, 165, 165);
+  text-align: center;
+  font-size: 11px;
+  margin-top: 10px;
+}
+.chave{
+  margin-top: -250px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 60px;
+}
+

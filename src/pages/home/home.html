@@ -1,9 +1,3 @@
-<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
-  <div class="container">
-    <div class="loader"></div>
-  </div>
-</div>
-
 <ion-header no-border>
   <ion-navbar>
     <button ion-button menuToggle>
@@ -20,7 +14,7 @@
   </div>
   <h4>O que vamos fazer ?</h4>
   <ion-card (click)="goSolicitacao()">
-      <ion-card-header>
+      <ion-card-header color='primary' style="font-weight: bold;">
         Solicitar crédito
       </ion-card-header>
       <ion-card-content text-wrap>
@@ -28,8 +22,8 @@
       </ion-card-content>
   </ion-card>
 
-  <ion-card (click)="goExtrato()">
-        <ion-card-header>
+  <ion-card (click)="goExtrato()" >
+        <ion-card-header color='primary' style="font-weight: bold;">
           Visualizar meu extrato
         </ion-card-header>
         <ion-card-content text-wrap>

@@ -1,0 +1,85 @@
+page-login {
+
+}
+
+.img-login{
+  width: 100%;
+  height: 100%;
+
+  background: url(../assets/imgs/banner.jpg) no-repeat  75% 75% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+.b{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 200px;
+}
+.b>button{
+  margin-top: 50px;
+  color: #fff;
+  border: #fff;
+}
+.logo-login {
+  width: 150px;
+  margin: 0 auto;
+}
+.img-responsive-login {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+
+//animação
+#custom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width:100%;
+  @include background-color-primary;
+  opacity: 0.9;
+  animation: exit 2s 2s;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  height: 50px;
+  width: 50px;
+  border: 5px solid #d5d5d5;
+  border-top-color: #e18d1b;
+  border-radius: 50%;
+  animation: spin .9s linear infinite;
+  margin: 50px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

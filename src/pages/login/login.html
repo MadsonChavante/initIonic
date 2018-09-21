@@ -1,0 +1,16 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="container">
+    <div class="loader"></div>
+  </div>
+</div>
+
+<ion-content class="img-login" horizontal layout center center-justified>
+      <div class="logo-login">
+          <img src="assets/imgs/logo.png" alt="" class="img-responsive-login"/>
+      </div>
+      <div class="b">
+          <button ion-button round (click)="login()">Entrar</button>
+          <button ion-button full outline color (click)="adesao()">criar conta</button>
+      </div>
+
+</ion-content>
